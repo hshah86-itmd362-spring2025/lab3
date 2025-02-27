@@ -358,6 +358,7 @@ li {
 }
 
 input {
+  box-sizing: border-box;
   width: 100%;
   border-style: none;
   background-color: #9da39a;
@@ -378,6 +379,12 @@ input:focus-visible {
   margin: 0 0 0.25rem 0;
 }
 
+#input-age-verification {
+  display: flex;
+  align-items: center;
+  gap: 0 1.2rem;
+}
+
 #input-submit input {
   background-color: #db2955;
   border-style: none;
@@ -390,4 +397,57 @@ input:focus-visible {
   background-color: #54494b;
 }
 
+#alt-box {
+  height: 1em;
+  width: 1em;
+  background-color: #9da39a;
+  border: 2px solid #9da39a;
+  border-radius: 4px;
+}
+
 /* ===== STATE STYLES ======= */
+
+.hasjs #age-verification {
+  position: absolute;
+  right: 6000px;
+}
+
+/* Tablet styles */
+@media screen and (min-width: 510px) {
+  form {
+    padding: 2rem;
+  }
+
+  #input-submit input {
+    max-width: 200px;
+  }
+}
+
+/* Desktop styles */
+@media screen and (min-width: 810px) {
+  body {
+    display: flex;
+  }
+
+  main {
+    width: 100%;
+    max-width: 600px;
+  }
+
+  form {
+    align-items: start;
+  }
+
+  ol {
+    padding: 0;
+  }
+
+  li {
+    align-items: start;
+    padding: 0.75rem 0;
+  }
+
+  #input-submit input {
+    float: left;
+  }
+}
